@@ -32,6 +32,14 @@ def sqrtBasico(objetivo):
             print("La raíz no es exacta")
 
 objetivo = int(input('Escoge un numero: '))
-sqrtBinario(objetivo)
-sqrtAprox(objetivo)
-sqrtBasico(objetivo)
+
+op=int(input("Digite que opción quiere: 1.Bin 2.Aprox 3.Básico "))
+
+if op==1:
+    sqrtBinario(objetivo)
+elif op==2:
+    sqrtAprox(objetivo)
+elif op==3:
+    sqrtBasico(objetivo)
+else:
+    print("Opción incorrecta")
