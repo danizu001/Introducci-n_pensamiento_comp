@@ -21,7 +21,17 @@ def sqrtAprox(objetivo, epsilon=0.01):
     else:
         print(f'La raiz cudrada de {objetivo} es {respuesta}')
 
-objetivo = int(input('Escoge un numero: '))
+def sqrtBasico(objetivo):
+    respuesta=0
+    while respuesta**2<objetivo:
+        respuesta += 1
+        
+    if respuesta**2 == objetivo:
+            print("La raíz es: " + str(respuesta))
+    else: 
+            print("La raíz no es exacta")
 
+objetivo = int(input('Escoge un numero: '))
 sqrtBinario(objetivo)
 sqrtAprox(objetivo)
+sqrtBasico(objetivo)
