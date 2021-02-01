@@ -1,0 +1,13 @@
+def primera_letra(lista_palabras):
+    primeras_letras = []
+    
+    for palabra in lista_palabras:
+        assert type(palabra) == str, f'{palabra} no es String'
+        assert len(palabra) > 0 , 'No se permiten vacios'
+        primeras_letras.append(palabra[0])
+
+    return primeras_letras
+
+
+lista = ['Angelo',5.5, '', 2 , '43952353', 0.35]
+print('Primeras letras validas son : ' , primera_letra(lista))
