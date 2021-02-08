@@ -1,9 +1,9 @@
+import time
 def sqrtBinario(objetivo, epsilon=0.01):
     bajo = 0.0
     alto = max(1.0, objetivo)
     respuesta = (alto + bajo) / 2
     while abs(respuesta**2 - objetivo) >= epsilon:
-        print(f'bajo={bajo}, alto={alto}, respuesta={respuesta}')
         if respuesta**2 < objetivo:
             bajo = respuesta
         else:
@@ -36,10 +36,19 @@ objetivo = int(input('Escoge un numero: '))
 op=int(input("Digite que opción quiere: 1.Bin 2.Aprox 3.Básico "))
 
 if op==1:
+    comienzo=time.time()
     sqrtBinario(objetivo)
+    final=time.time()
+    print(final-comienzo)
 elif op==2:
+    comienzo=time.time()
     sqrtAprox(objetivo)
+    final=time.time()
+    print(final-comienzo)
 elif op==3:
+    comienzo=time.time()
     sqrtBasico(objetivo)
+    final=time.time()
+    print(final-comienzo)
 else:
     print("Opción incorrecta")
