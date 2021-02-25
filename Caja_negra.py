@@ -1,3 +1,5 @@
+#Nos aseguramos con unittest.TestCase de asegurarnos de alguna respuesta
+#para evitar algunos bugs.
 import unittest
 
 
